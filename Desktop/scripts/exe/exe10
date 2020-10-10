@@ -1,0 +1,16 @@
+#!/bin/bash
+
+FILE=$1
+
+if [ -d $FILE ]; then
+	echo "$FILE is a directory. Exit with exit 1 status"
+	exit 1
+
+elif [ -f $FILE ]; then
+	echo "$FILE is a regular file. Exit with exit 0 status"
+	exit 0
+
+else
+	echo "$FILE is not a regular file. Exit with exit 2 status"
+	exit2
+fi

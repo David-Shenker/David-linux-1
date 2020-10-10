@@ -1,0 +1,4 @@
+#!/bin/bash
+
+Hostname=$(hostname)
+echo "This script is runnig on $Hostname"

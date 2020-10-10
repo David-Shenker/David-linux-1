@@ -1,0 +1,8 @@
+#!/bin/bash
+
+list="man bear pig dog cat sheep"
+
+for animal in $list
+do
+	echo "$animal"
+done

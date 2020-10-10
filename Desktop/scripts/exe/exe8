@@ -1,0 +1,19 @@
+#!/bin/bash
+
+check=$@
+
+for item in $check ; do
+	if [ -f "$item" ]; then 
+		echo "$item is a regular file"
+		echo "The file content is:"
+		cat $item
+	elif [ -d "$item" ]; then
+		echo "$item is a directory"
+		echo "The directory content is:"
+		ls -l $item
+	else
+		echo "$item is NOT a regular file"
+	        echo "The file content is:"
+		cat $item
+	fi
+done

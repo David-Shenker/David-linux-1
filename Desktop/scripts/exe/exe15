@@ -1,0 +1,40 @@
+#!/bin/bash
+
+echo "Enter the directory path"
+read DIR
+
+cd $DIR
+
+echo "Enter a file extention (.txt , .jpg , Etc)"
+read EXTENTION
+
+echo "Enter the prifix you want for the file (for full date. just type 'Date')"
+read PRIFIX
+
+DATE=$(date +%F)
+
+for FILE in *$EXTENTION ; do
+	if [ $PRIFIX = Date ] ; then
+		echo "Renaming $FILE to: $DATE-$FILE"
+		echo "yes / no ?"
+		read A1
+			if [ $A1 = yes ] ; then
+				mv $FILE $DATE-$FILE
+				echo "Done!"
+			elif [ $A1 = no ] ; then
+				echo "Ok, didn't make any changes"
+				echo "Goodbye!"
+			fi
+	else
+		echo "Renaming $FILE to: $PRIFIX-$FILE"
+		echo "yes / no ?"
+                read A2
+                        if [ $A2 = yes ] ; then
+                                mv $FILE $PRIFIX-$FILE
+                                echo "Done!"
+                        elif [ $A2 = no ] ; then
+                                echo "Ok, didn't make any changes"
+                                echo "Goodbye!"
+			fi
+	fi
+done

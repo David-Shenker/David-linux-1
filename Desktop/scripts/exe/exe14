@@ -1,0 +1,16 @@
+#!/bin/bash
+
+DATE=$( date +%F )
+
+echo "Name a directory (path) that you would like to rename the .jpg files in it, with full date at the begining of that file."
+read DIR
+
+cd $DIR
+
+for FILE in *.jpg ; do
+	mv $FILE $DATE-$FILE
+	echo "The renamed files are: $DATE-$FILE"
+done	
+
+
+

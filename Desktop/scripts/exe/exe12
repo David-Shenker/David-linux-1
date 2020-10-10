@@ -1,0 +1,13 @@
+#!/bin/bash
+
+function file_count ()
+{
+	count=$(ls -l | wc -l)
+	echo "$count"
+}
+
+echo "Enter a directory path to count the files in it:"
+read DIR
+
+cd $DIR
+file_count

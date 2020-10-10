@@ -1,0 +1,18 @@
+#!/bin/bash
+
+FILE=~/Desktop/scripts/exe/file4_path
+if [ -f "$FILE" ]
+then
+	echo "$FILE passwords are enabeld"
+else
+	echo "$FILE passwords are NOT enabeld"
+fi
+
+if [ -w  "$FILE" ]
+then
+	echo "You have permissions to overwrite $FILE"
+else
+	echo "You don't have permissions to overwrite $FILE"
+fi
+
+

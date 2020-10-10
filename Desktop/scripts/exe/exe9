@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "The scrip will exit with 0 exit status"
+exit 0
+

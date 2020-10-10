@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [ -f "$1" ]; then 
+	echo "$1 is a regular file"
+	echo "The file content is:"
+	cat $1
+elif [ -d "$1" ]; then
+	echo "$1 is a directory"
+	echo "The directory content is:"
+	ls -l $1
+else
+	echo "$1 is NOT a regular file"
+        echo "The file content is:"
+	cat $1
+fi

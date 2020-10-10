@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "Enter a file or directory path"
+read FILE
+
+if [ -f "$FILE" ]; then 
+	echo "$FILE is a regular file"
+	echo "The file content is:"
+	cat $FILE
+elif [ -d "$FILE" ]; then
+	echo "$FILE is a directory"
+	echo "The directory content is:"
+	ls -l $FILE
+else
+	echo "$FILE is NOT a regular file"
+        echo "The file content is:"
+	cat $FILEE
+fi
+

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+name="Shell scripting is FUN!"
+echo "$name"
